@@ -1,14 +1,43 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      theme-detection
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-note>Here are 2 ways to access whether the native theme has dark mode enabled</ion-note>
+  <ion-card>
+    <ion-card-header>
+      By window.matchMedia
+    </ion-card-header>
+    <ion-card-content>
+      <ion-card-title>
+        isAvailable
+      </ion-card-title>
+      <p>{{ matchMedia.isAvailable }}</p>
+      <ion-card-title>
+        isDarkModeEnabled
+      </ion-card-title>
+      <p>{{ matchMedia.isDarkModeEnabled }}</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      By cordova-plugin-theme-detection
+    </ion-card-header>
+    <ion-card-content>
+      <ion-card-title>
+        isAvailable
+      </ion-card-title>
+      <p>{{ cordovaPlugin.isAvailable }}</p>
+      <ion-card-title>
+        isDarkModeEnabled
+      </ion-card-title>
+      <p>{{ cordovaPlugin.isDarkModeEnabled }}</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-note>The machine needs to be manually refreshed after changing the dark mode state</ion-note>
+  <button ion-button block (click)="doRefreshAppTheme()">Recheck</button>
 </ion-content>
