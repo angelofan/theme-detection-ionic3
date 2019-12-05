@@ -2,7 +2,7 @@
 
 ### Clone Code From Git
 ```
-$ git clone https://github.com/13546777510/theme-detection-ionic3.git
+$ git clone https://github.com/angelofan/theme-detection-ionic3.git
 ```
 
 ### Open project
