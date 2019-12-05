@@ -1,4 +1,4 @@
-# Cordova plugin for theme detection in ionic3
+# 2 ways to determine whether an is enabled in ionic3
 
 ### Clone Code From Git
 ```
